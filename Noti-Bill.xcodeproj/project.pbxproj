@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9A9D4662BCD056400E1327D /* Noti_BillApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A9D4652BCD056400E1327D /* Noti_BillApp.swift */; };
+		F9A9D4682BCD056400E1327D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A9D4672BCD056400E1327D /* ContentView.swift */; };
+		F9A9D46A2BCD056700E1327D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A9D4692BCD056700E1327D /* Assets.xcassets */; };
+		F9A9D46D2BCD056700E1327D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A9D46C2BCD056700E1327D /* Preview Assets.xcassets */; };
+		F9A9D4772BCD056800E1327D /* Noti_BillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A9D4762BCD056800E1327D /* Noti_BillTests.swift */; };
+		F9A9D4812BCD056800E1327D /* Noti_BillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A9D4802BCD056800E1327D /* Noti_BillUITests.swift */; };
+		F9A9D4832BCD056800E1327D /* Noti_BillUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A9D4822BCD056800E1327D /* Noti_BillUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9A9D4732BCD056800E1327D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9A9D45A2BCD056400E1327D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A9D4612BCD056400E1327D;
+			remoteInfo = "Noti-Bill";
+		};
+		F9A9D47D2BCD056800E1327D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9A9D45A2BCD056400E1327D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A9D4612BCD056400E1327D;
+			remoteInfo = "Noti-Bill";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9A9D4622BCD056400E1327D /* Noti-Bill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Noti-Bill.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A9D4652BCD056400E1327D /* Noti_BillApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noti_BillApp.swift; sourceTree = "<group>"; };
+		F9A9D4672BCD056400E1327D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F9A9D4692BCD056700E1327D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9A9D46C2BCD056700E1327D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F9A9D4722BCD056800E1327D /* Noti-BillTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Noti-BillTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A9D4762BCD056800E1327D /* Noti_BillTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noti_BillTests.swift; sourceTree = "<group>"; };
+		F9A9D47C2BCD056800E1327D /* Noti-BillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Noti-BillUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A9D4802BCD056800E1327D /* Noti_BillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noti_BillUITests.swift; sourceTree = "<group>"; };
+		F9A9D4822BCD056800E1327D /* Noti_BillUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Noti_BillUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9A9D45F2BCD056400E1327D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A9D46F2BCD056800E1327D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A9D4792BCD056800E1327D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9A9D4592BCD056400E1327D = {
+			isa = PBXGroup;
+			children = (
+				F9A9D4642BCD056400E1327D /* Noti-Bill */,
+				F9A9D4752BCD056800E1327D /* Noti-BillTests */,
+				F9A9D47F2BCD056800E1327D /* Noti-BillUITests */,
+				F9A9D4632BCD056400E1327D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9A9D4632BCD056400E1327D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9A9D4622BCD056400E1327D /* Noti-Bill.app */,
+				F9A9D4722BCD056800E1327D /* Noti-BillTests.xctest */,
+				F9A9D47C2BCD056800E1327D /* Noti-BillUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9A9D4642BCD056400E1327D /* Noti-Bill */ = {
+			isa = PBXGroup;
+			children = (
+				F9A9D4652BCD056400E1327D /* Noti_BillApp.swift */,
+				F9A9D4672BCD056400E1327D /* ContentView.swift */,
+				F9A9D4692BCD056700E1327D /* Assets.xcassets */,
+				F9A9D46B2BCD056700E1327D /* Preview Content */,
+			);
+			path = "Noti-Bill";
+			sourceTree = "<group>";
+		};
+		F9A9D46B2BCD056700E1327D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F9A9D46C2BCD056700E1327D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F9A9D4752BCD056800E1327D /* Noti-BillTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9A9D4762BCD056800E1327D /* Noti_BillTests.swift */,
+			);
+			path = "Noti-BillTests";
+			sourceTree = "<group>";
+		};
+		F9A9D47F2BCD056800E1327D /* Noti-BillUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9A9D4802BCD056800E1327D /* Noti_BillUITests.swift */,
+				F9A9D4822BCD056800E1327D /* Noti_BillUITestsLaunchTests.swift */,
+			);
+			path = "Noti-BillUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9A9D4612BCD056400E1327D /* Noti-Bill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9A9D4862BCD056800E1327D /* Build configuration list for PBXNativeTarget "Noti-Bill" */;
+			buildPhases = (
+				F9A9D45E2BCD056400E1327D /* Sources */,
+				F9A9D45F2BCD056400E1327D /* Frameworks */,
+				F9A9D4602BCD056400E1327D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Noti-Bill";
+			productName = "Noti-Bill";
+			productReference = F9A9D4622BCD056400E1327D /* Noti-Bill.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9A9D4712BCD056800E1327D /* Noti-BillTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9A9D4892BCD056800E1327D /* Build configuration list for PBXNativeTarget "Noti-BillTests" */;
+			buildPhases = (
+				F9A9D46E2BCD056800E1327D /* Sources */,
+				F9A9D46F2BCD056800E1327D /* Frameworks */,
+				F9A9D4702BCD056800E1327D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9A9D4742BCD056800E1327D /* PBXTargetDependency */,
+			);
+			name = "Noti-BillTests";
+			productName = "Noti-BillTests";
+			productReference = F9A9D4722BCD056800E1327D /* Noti-BillTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9A9D47B2BCD056800E1327D /* Noti-BillUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9A9D48C2BCD056800E1327D /* Build configuration list for PBXNativeTarget "Noti-BillUITests" */;
+			buildPhases = (
+				F9A9D4782BCD056800E1327D /* Sources */,
+				F9A9D4792BCD056800E1327D /* Frameworks */,
+				F9A9D47A2BCD056800E1327D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9A9D47E2BCD056800E1327D /* PBXTargetDependency */,
+			);
+			name = "Noti-BillUITests";
+			productName = "Noti-BillUITests";
+			productReference = F9A9D47C2BCD056800E1327D /* Noti-BillUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9A9D45A2BCD056400E1327D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					F9A9D4612BCD056400E1327D = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					F9A9D4712BCD056800E1327D = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = F9A9D4612BCD056400E1327D;
+					};
+					F9A9D47B2BCD056800E1327D = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = F9A9D4612BCD056400E1327D;
+					};
+				};
+			};
+			buildConfigurationList = F9A9D45D2BCD056400E1327D /* Build configuration list for PBXProject "Noti-Bill" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9A9D4592BCD056400E1327D;
+			productRefGroup = F9A9D4632BCD056400E1327D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9A9D4612BCD056400E1327D /* Noti-Bill */,
+				F9A9D4712BCD056800E1327D /* Noti-BillTests */,
+				F9A9D47B2BCD056800E1327D /* Noti-BillUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9A9D4602BCD056400E1327D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9A9D46D2BCD056700E1327D /* Preview Assets.xcassets in Resources */,
+				F9A9D46A2BCD056700E1327D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A9D4702BCD056800E1327D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A9D47A2BCD056800E1327D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9A9D45E2BCD056400E1327D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9A9D4682BCD056400E1327D /* ContentView.swift in Sources */,
+				F9A9D4662BCD056400E1327D /* Noti_BillApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A9D46E2BCD056800E1327D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9A9D4772BCD056800E1327D /* Noti_BillTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A9D4782BCD056800E1327D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9A9D4812BCD056800E1327D /* Noti_BillUITests.swift in Sources */,
+				F9A9D4832BCD056800E1327D /* Noti_BillUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9A9D4742BCD056800E1327D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9A9D4612BCD056400E1327D /* Noti-Bill */;
+			targetProxy = F9A9D4732BCD056800E1327D /* PBXContainerItemProxy */;
+		};
+		F9A9D47E2BCD056800E1327D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9A9D4612BCD056400E1327D /* Noti-Bill */;
+			targetProxy = F9A9D47D2BCD056800E1327D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F9A9D4842BCD056800E1327D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9A9D4852BCD056800E1327D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9A9D4872BCD056800E1327D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Noti-Bill/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "th.ku.ac.Noti-Bill";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9A9D4882BCD056800E1327D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Noti-Bill/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "th.ku.ac.Noti-Bill";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9A9D48A2BCD056800E1327D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "th.ku.ac.Noti-BillTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Noti-Bill.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Noti-Bill";
+			};
+			name = Debug;
+		};
+		F9A9D48B2BCD056800E1327D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "th.ku.ac.Noti-BillTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Noti-Bill.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Noti-Bill";
+			};
+			name = Release;
+		};
+		F9A9D48D2BCD056800E1327D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "th.ku.ac.Noti-BillUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Noti-Bill";
+			};
+			name = Debug;
+		};
+		F9A9D48E2BCD056800E1327D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "th.ku.ac.Noti-BillUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Noti-Bill";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9A9D45D2BCD056400E1327D /* Build configuration list for PBXProject "Noti-Bill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9A9D4842BCD056800E1327D /* Debug */,
+				F9A9D4852BCD056800E1327D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9A9D4862BCD056800E1327D /* Build configuration list for PBXNativeTarget "Noti-Bill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9A9D4872BCD056800E1327D /* Debug */,
+				F9A9D4882BCD056800E1327D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9A9D4892BCD056800E1327D /* Build configuration list for PBXNativeTarget "Noti-BillTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9A9D48A2BCD056800E1327D /* Debug */,
+				F9A9D48B2BCD056800E1327D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9A9D48C2BCD056800E1327D /* Build configuration list for PBXNativeTarget "Noti-BillUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9A9D48D2BCD056800E1327D /* Debug */,
+				F9A9D48E2BCD056800E1327D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9A9D45A2BCD056400E1327D /* Project object */;
+}
