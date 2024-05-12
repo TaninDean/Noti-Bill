@@ -31,7 +31,7 @@ struct StatementView: View {
                 // Pie Chart Placeholder
                 // You would replace this with a pie chart from a library or custom implementation
                 VStack {
-                    Text("Fund list")
+                    Text("Pie Chart")
                         .font(.headline)
                         .padding(.bottom, 5)
                     
@@ -85,7 +85,7 @@ struct StatementView: View {
         .background(Color("BakcgroundColor"))
         .onAppear {
             Task {
-                await viewModel.fetchBills()
+                viewModel.fetchBills()
             }
         }
        

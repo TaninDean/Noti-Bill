@@ -59,7 +59,7 @@ struct SettingView: View {
                         .onChange(of: notificationSetting) { value in
                             UserDefaults.standard.set(notificationSetting, forKey: "notificationSetting")
                             if value {
-//                                requestNotificationPermission()
+                                requestNotificationPermission()
                                 
                             }
                         }
@@ -67,7 +67,7 @@ struct SettingView: View {
                         .onChange(of: pushNotification) { value in
                             UserDefaults.standard.set(pushNotification, forKey: "pushNotificationSetting")
                             if value {
-//                                scheduleMonthlyNotification()
+                                scheduleMonthlyNotification()
         
                             }
                         }
