@@ -51,7 +51,8 @@ struct FillTheBillView: View {
                                         .foregroundColor(.green)
                                 }
                                 .frame(width: 40, height: 40)
-
+                                
+                                Text(bill.name)
                                 // Category
                                 VStack{
                                     Text(bill.category)
@@ -158,81 +159,6 @@ struct FillTheBillView: View {
             viewModel.fetchBills()  // Refetch the data when the form is dismissed
         }
 }
-
-struct FillBillForm: View {
-    @Binding var showingPopup: Bool
-    var onDismiss: () -> Void
-    @State private var name: String = ""
-    @State private var group: String = ""
-    @State private var price: String = ""
-    @State private var installment: String = ""
-    @State private var fee: String = ""
-
-    var body: some View {
-        VStack(spacing: 20) {
-            // Close button at the top right corner of the popup
-            HStack {
-                Spacer()
-                Button(action: {
-                    showingPopup = false
-                }) {
-                    Image(systemName: "xmark")
-                        .foregroundColor(.black)
-                        .padding()
-                        .background(Color.white)
-                        .clipShape(Circle())
-                }
-            }
-            .padding(.top)
-            
-            Text("Fill Bill")
-                .font(.title)
-                .fontWeight(.bold)
-            
-            // Form fields
-            Group {
-                TextField("Name", text: $name)
-                TextField("Group", text: $group)
-                TextField("Price", text: $price)
-                HStack {
-                    TextField("Installment", text: $installment)
-                    TextField("Fee", text: $fee)
-                }
-            }
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .padding()
-            
-            // Save button
-            Button("SAVE") {
-                let uuid = UserDefaults.standard.string(forKey: "id")
-                let currentTime = Date()
-                let data: [String: Any] = [
-                    "date": currentTime.timeIntervalSince1970,
-                    "name": name,
-                    "group": group,
-                    "price": price,
-                    "installment": installment,
-                    "fee": fee
-                ]
-                FirestoreManager().addData(collectionName: "UserBills", uuid: uuid!, data: data)
-                showingPopup = false
-                self.onDismiss()
-            }
-            .foregroundColor(.white)
-            .padding()
-            .background(Color.blue)
-            .clipShape(Capsule())
-
-            Spacer()
-        }
-        .frame(width: .infinity, height: .infinity)
-        .background(Color.white)
-        .cornerRadius(12)
-        .shadow(radius: 10)
-    }
-
-}
-
 
 struct FillTheBillView_Previews: PreviewProvider {
     static var previews: some View {

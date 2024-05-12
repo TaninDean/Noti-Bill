@@ -18,9 +18,32 @@ struct Bill: Identifiable {
     let fee: Double
 }
 
+struct CategoryValue: Identifiable {
+    let id = UUID()
+    let category: String
+    let value: Int
+}
+
+struct Category: Identifiable {
+    let id = UUID()
+    let name: String
+    let color: Color
+    let value: Double
+}
+
 class BillsViewModel: ObservableObject {
     @Published var bills = [Bill]()
     @Published var showingPopup = false
+    @Published var totalForPeriod: Double = 0.0
+    @Published var monthlyTotals: [(String, Double, Double)] = []
+    @Published var products: [Product] = []
+    @Published var categoryValues = [CategoryValue]()
+    @Published var avaiableCategory = [Category]()
+    @Published var nav = 0.0
+    
+    init() {
+            fetchBills()
+        }
 
     func fetchBills() {
         let id = UserDefaults.standard.string(forKey: "id") ?? ""
@@ -45,12 +68,103 @@ class BillsViewModel: ObservableObject {
                                     price: parsePrice, installment: parseInstallment, fee: parseFee
                         )
                     }
+                    self.calculateTotalForPeriod()
+                    self.calculateMonthlyTotals()
+                    self.updateProducts()
+                    self.processBillsByGroupCategory()
+                    self.processavailableCategory()
                 } else if let error = error {
                     print("Error fetching bills: \(error)")
                 }
             }
         }
     }
+    
+    func calculateTotalForPeriod() {
+            let calendar = Calendar.current
+            let now = Date()
+            let startOfCurrentMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: now))!
+            let twentyFifthOfLastMonth = calendar.date(byAdding: .day, value: 24, to: startOfCurrentMonth.addingTimeInterval(-1))!
+            let twentyFifthOfThisMonth = calendar.date(byAdding: .day, value: 24, to: startOfCurrentMonth)!
+        
+            let twentyFifthOfLastMonthTimestamp = twentyFifthOfLastMonth.timeIntervalSince1970
+            let twentyFifthOfThisMonthTimestamp = twentyFifthOfThisMonth.timeIntervalSince1970
+
+            totalForPeriod = bills.reduce(0) { result, bill in
+                if bill.date >= twentyFifthOfLastMonthTimestamp && bill.date <= twentyFifthOfThisMonthTimestamp {
+                    return result + (bill.price + bill.price * bill.fee / 100) / bill.installment
+                }
+                return result
+            }
+        }
+    
+    func calculateMonthlyTotals() {
+            let calendar = Calendar.current
+            
+            // Convert each bill's date from Double to Date before grouping
+            let grouped = Dictionary(grouping: bills) { bill -> DateComponents in
+                let billDate = Date(timeIntervalSince1970: bill.date)
+                return calendar.dateComponents([.year, .month], from: billDate)
+            }
+
+            // Calculate the sum for each group
+            monthlyTotals = grouped.map { key, value in
+                let monthYear = "\(calendar.monthSymbols[key.month! - 1])-\(key.year!)"
+                let total = value.reduce(0.0) { result, bill in
+                    result + (bill.price + bill.price * bill.fee / 100) / bill.installment
+                }
+                return (monthYear, 25.25, total) // Adjust as needed
+            }.sorted { $0.0 < $1.0 }
+            print("Monthly Totals Updated: \(monthlyTotals)")
+        }
+    
+    func updateProducts() {
+        let totalRevenue = monthlyTotals.reduce(0.0) { $0 + $1.2 }
+        print("Total revenue \(totalRevenue)")
+        products = monthlyTotals.map { (month, _, revenue) in
+            Product(title: month, revenue: revenue / totalRevenue)
+        }
+        print("Product \(products)" )
+    }
+    
+    func processBillsByGroupCategory() {
+        var categoryTotals: [String: Double] = [:]
+
+        // Aggregate total prices by group
+        for bill in bills {
+            categoryTotals[bill.category, default: 0] += bill.price
+        }
+
+        // Create category value list
+        self.categoryValues = categoryTotals.map { CategoryValue(category: $0.key, value: Int($0.value)) }
+    }
+    
+    private func processavailableCategory() {
+        let colorMap: [String: Color] = [
+            "Entertainment": .green,
+            "Food": .red,
+            "Cloth": .blue,
+            "Movie": .orange,
+            "Investment": .yellow,
+            "Save": .pink,
+            "Bill": .purple
+        ]
+
+        var categoryTotals: [String: Double] = [:]
+
+        for bill in bills {
+            categoryTotals[bill.category, default: 0] += bill.price
+        }
+
+        self.avaiableCategory = categoryTotals.map { (key, value) in
+            Category(name: key, color: colorMap[key, default: .gray], value: value)
+        }.sorted { $0.name < $1.name }
+        
+        self.nav =  self.avaiableCategory.reduce(0) { sum, category in
+                sum + category.value
+            }
+    }
+    
 }
 
 

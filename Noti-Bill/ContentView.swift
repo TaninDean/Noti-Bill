@@ -3,12 +3,13 @@ import SwiftUI
 struct ContentView: View {
     @State private var availableCredit: Float
     @State private var showCreditSheet: Bool
-
-        init() {
-            let credit = UserDefaults.standard.float(forKey: "availableCredit")
-            _availableCredit = State(initialValue: credit)
-            _showCreditSheet = State(initialValue: credit == 0.0)
-        }
+    @StateObject private var viewModel = BillsViewModel()
+    
+    init() {
+        let credit = UserDefaults.standard.float(forKey: "availableCredit")
+        _availableCredit = State(initialValue: credit)
+        _showCreditSheet = State(initialValue: credit == 0.0)
+    }
     
     var body: some View {
         NavigationView {
@@ -29,7 +30,7 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.subheadline.bold()).foregroundColor(.white)
                         .padding()
-                    Text(String(availableCredit) + " bath")
+                    Text("\(availableCredit - Float(viewModel.totalForPeriod), specifier: "%.2f") bath ")
                         .font(.system(size: 40))
                         .fontWeight(.bold)
                         .foregroundColor(.black)
@@ -38,6 +39,9 @@ struct ContentView: View {
                 }
                 .background(Color(red: 0.0, green: 0.4980392156862745, blue: 0.4627450980392157))
                 .frame(maxWidth: .infinity)
+                .onAppear{
+                    viewModel.fetchBills()
+                }
                 
                 Button("Update Credit") {
                     self.showCreditSheet = true
@@ -71,7 +75,7 @@ struct ContentView: View {
                     }
                     
                     HStack(spacing: 10) {
-                        NavigationLink(destination: SettingView()) {
+                        NavigationLink(destination: FinancialAnalysisView()) {
                             VStack {
                                 Image("AnalysisIcon")
                                     .resizable()
@@ -107,7 +111,7 @@ struct ContentView: View {
                 Spacer()
             }
             .sheet(isPresented: $showCreditSheet) {
-                        CreditEntryView(availableCredit: $availableCredit)
+                    CreditEntryView(availableCredit: $availableCredit)
             }
             .background(Color("BakcgroundColor"))
             .foregroundColor(.black)

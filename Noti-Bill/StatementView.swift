@@ -8,34 +8,15 @@ struct Product: Identifiable {
 }
 
 struct StatementView: View {
-    // Assuming you have a data model for your funds, you'd use that here
-    // For simplicity, we'll use a static list
-    let fundList = [
-        ("January", 25.25, 100000),
-        ("February", 25.25, 100000),
-        ("March", 25.25, 100000),
-        ("April", 25.25, 100000),
-        ("May", 25.25, 100000)
-        // Add more months as needed
-    ]
+    @State private var availableCredit: Float
     
-    let data = [
-            (value: 25, label: "January"),
-            (value: 25, label: "February"),
-            (value: 25, label: "March"),
-            (value: 25, label: "April"),
-            (value: 25, label: "May"),
-            (value: 25, label: "June"),
-            (value: 25, label: "July"),
-            (value: 25, label: "August")
-        ]
+    init() {
+        let credit = UserDefaults.standard.float(forKey: "availableCredit")
+        _availableCredit = State(initialValue: credit)
+    }
     
-    
-    @State private var products: [Product] = [
-            .init(title: "Annual", revenue: 0.7),
-            .init(title: "Monthly", revenue: 0.2),
-            .init(title: "Lifetime", revenue: 0.1)
-        ]
+    @StateObject private var viewModel = BillsViewModel()
+
     
     var body: some View {
         ScrollView {
@@ -59,7 +40,7 @@ struct StatementView: View {
                         Circle()
                             .fill(Color.gray.opacity(0.2))
                         VStack {
-                            Chart(products) { product in
+                            Chart(viewModel.products) { product in
                                         SectorMark(
                                             angle: .value(
                                                 Text(verbatim: product.title),
@@ -83,14 +64,15 @@ struct StatementView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
 
                 // List of funds
-                ForEach(fundList, id: \.0) { month, percentage, totalNav in
+                ForEach(viewModel.monthlyTotals, id: \.0) { data in
+                    let (month, percentage, totalNav) = data
                     VStack(alignment: .leading) {
                         Text("Month: \(month)")
                             .fontWeight(.semibold)
                         HStack {
-                            Text("Percentage \(percentage) %")
+                            Text("Percentage: \((totalNav * 100)/100000, specifier: "%.2f") %")
                             Spacer()
-                            Text("Total Nav: \(totalNav)")
+                            Text("Total Nav: \(totalNav, specifier: "%.2f")")
                         }
                     }
                     .padding()
@@ -100,8 +82,26 @@ struct StatementView: View {
             }
             .padding()
         }
-        .background(Color("BakcgroundColor")) // Replace with the actual color you're using
+        .background(Color("BakcgroundColor"))
+        .onAppear {
+            Task {
+                await viewModel.fetchBills()
+            }
+        }
+       
     }
+    
+    private var emptyChartPlaceholder: some View {
+            ZStack {
+                Circle()
+                    .fill(Color.gray.opacity(0.2))
+                Text("No data to display")
+                    .foregroundColor(.gray)
+                    .font(.caption)
+            }
+            .frame(height: 200)
+            .padding()
+        }
 }
 
 struct StatementUI_Previews: PreviewProvider {

@@ -54,6 +54,8 @@
 		F9B4EBBC2BE126E500D27C08 /* CreditEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4EBBB2BE126E500D27C08 /* CreditEntryView.swift */; };
 		F9B4EBBE2BE12F7400D27C08 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4EBBD2BE12F7400D27C08 /* FirestoreManager.swift */; };
 		F9B4EBC02BE2932600D27C08 /* BillsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B4EBBF2BE2932600D27C08 /* BillsViewModel.swift */; };
+		F9DAD35D2BF0A79F00E7FF96 /* FinancialAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DAD35C2BF0A79E00E7FF96 /* FinancialAnalysisView.swift */; };
+		F9DAD35F2BF10B1700E7FF96 /* FillBillForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DAD35E2BF10B1700E7FF96 /* FillBillForm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		F9B4EBBB2BE126E500D27C08 /* CreditEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditEntryView.swift; sourceTree = "<group>"; };
 		F9B4EBBD2BE12F7400D27C08 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		F9B4EBBF2BE2932600D27C08 /* BillsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillsViewModel.swift; sourceTree = "<group>"; };
+		F9DAD35C2BF0A79E00E7FF96 /* FinancialAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialAnalysisView.swift; sourceTree = "<group>"; };
+		F9DAD35E2BF10B1700E7FF96 /* FillBillForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillBillForm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,8 @@
 				F9B4EBB72BDFF6DA00D27C08 /* CustomDiaglog.swift */,
 				F9B4EBBD2BE12F7400D27C08 /* FirestoreManager.swift */,
 				F9B4EBBF2BE2932600D27C08 /* BillsViewModel.swift */,
+				F9DAD35C2BF0A79E00E7FF96 /* FinancialAnalysisView.swift */,
+				F9DAD35E2BF10B1700E7FF96 /* FillBillForm.swift */,
 			);
 			path = "Noti-Bill";
 			sourceTree = "<group>";
@@ -385,7 +391,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9A9D4D52BD01A9A00E1327D /* RegisterView.swift in Sources */,
+				F9DAD35F2BF10B1700E7FF96 /* FillBillForm.swift in Sources */,
 				F9B4EBBC2BE126E500D27C08 /* CreditEntryView.swift in Sources */,
+				F9DAD35D2BF0A79F00E7FF96 /* FinancialAnalysisView.swift in Sources */,
 				F9A9D4962BCD853300E1327D /* FillTheBillView.swift in Sources */,
 				F9A9D4A32BD014E400E1327D /* LoginView.swift in Sources */,
 				F9A9D4902BCD05B600E1327D /* IconUIView.swift in Sources */,
