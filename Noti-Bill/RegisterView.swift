@@ -80,9 +80,11 @@ struct RegisterView: View {
             }
             .background(Color("BakcgroundColor").edgesIgnoringSafeArea(.all))
             .navigationBarTitle("Register", displayMode: .inline)
-            .alert(isPresented: $pass) {
-                Alert(title: Text("Registration Successful"), message: Text("You can now log in."), dismissButton: .default(Text("OK")))
-            }
+            .sheet(isPresented: $pass) {
+            CustomDialog(isActive: $pass, title: "Registration Successful.", message: "You can now log in.", buttonTitle: "Close", showButton: false, action: {
+                print("Dialog closed")
+            })
+        }
         }
     }
 }

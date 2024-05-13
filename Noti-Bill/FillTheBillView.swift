@@ -38,6 +38,7 @@ struct FillTheBillView: View {
             ScrollView {
                 VStack(spacing: 20) {
                     ForEach(viewModel.bills) { bill in
+                        let adjustedInstallment = max(1, bill.installment)
                         VStack {
                             HStack(alignment: .top){
                                 ZStack {
@@ -104,7 +105,7 @@ struct FillTheBillView: View {
                                     Text("Next Bill")
                                         .font(.caption)
                                         .foregroundColor(.gray)
-                                    Text("\((bill.price + bill.price * bill.fee / 100)/bill.installment, specifier: "%.2f")")
+                                    Text("\((bill.price + bill.price * bill.fee / 100)/adjustedInstallment, specifier: "%.2f")")
                                         .fontWeight(.bold)
                                         .foregroundColor(.white)
                                         .padding(.all, 4)

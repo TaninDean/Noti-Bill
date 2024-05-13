@@ -34,7 +34,7 @@ struct SettingView: View {
         content.sound = UNNotificationSound.default
 
         var dateComponents = DateComponents()
-        dateComponents.day = 24 // Set the day of the month here
+        dateComponents.day = 13
 
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
 

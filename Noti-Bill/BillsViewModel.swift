@@ -83,8 +83,11 @@ class BillsViewModel: ObservableObject {
     func calculateTotalForPeriod() {
             let calendar = Calendar.current
             let now = Date()
-            let startOfCurrentMonth = calendar.date(from: calendar.dateComponents([.year, .month], from: now))!
-            let twentyFifthOfLastMonth = calendar.date(byAdding: .day, value: 24, to: startOfCurrentMonth.addingTimeInterval(-1))!
+            let startOfCurrentMonth = calendar.date(from: calendar.dateComponents([.year, .month, .day], from: now))!
+            print(startOfCurrentMonth)
+            let previousMonth = calendar.date(byAdding: .month, value: -1, to: startOfCurrentMonth)!
+
+            let twentyFifthOfLastMonth = calendar.date(byAdding: .day, value: 24, to: previousMonth)!
             let twentyFifthOfThisMonth = calendar.date(byAdding: .day, value: 24, to: startOfCurrentMonth)!
         
             let twentyFifthOfLastMonthTimestamp = twentyFifthOfLastMonth.timeIntervalSince1970
@@ -92,7 +95,8 @@ class BillsViewModel: ObservableObject {
 
             totalForPeriod = bills.reduce(0) { result, bill in
                 if bill.date >= twentyFifthOfLastMonthTimestamp && bill.date <= twentyFifthOfThisMonthTimestamp {
-                    return result + (bill.price + bill.price * bill.fee / 100) / bill.installment
+                    let adjustedInstallment = max(1, bill.installment)
+                    return result + bill.price
                 }
                 return result
             }
